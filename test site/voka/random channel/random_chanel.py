@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import pytest
 import time
 import random
 from datetime import datetime
@@ -15,7 +14,7 @@ while True:
     browser = webdriver.Chrome()
     browser.maximize_window()
     browser.get("https://voka.tv/ru-RU/tv-v/tv-v2")
-    browser.find_element(By.XPATH, "//div[@class='box__Box-sc-1nfqpxp-0 layout__Layout-sc-1hefmoq-0 kWeinD lfyCzu']/a[@href='/ru-RU/collections/tv-kanaly']").click()
+    browser.find_element(By.XPATH, "//section[@data-testid='card_collection'][1]/div/a").click()
     time.sleep(1)
     elements = browser.find_elements(By.XPATH, "//*[@class='_Foz4 VvSJ7']")
     element = random.choice(elements).click()
