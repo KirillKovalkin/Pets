@@ -16,7 +16,7 @@ for i in range(3):
     browser.find_element(By.XPATH, "//section[@data-testid='card_collection'][1]/div/a").click()
     time.sleep(1)
     elements = browser.find_elements(By.XPATH, "//*[@class='_Foz4 VvSJ7']")
-    element = random.choice(elements).click()
+    random.choice(elements).click()
     time.sleep(3)
     now = datetime.now().strftime("%H:%M:%S")
     browser.save_screenshot('screenshots_' + today + '/' + now + '.png')
