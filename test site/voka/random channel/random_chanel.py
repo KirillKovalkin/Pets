@@ -9,8 +9,7 @@ import os
 today = datetime.now().strftime("%d.%m.%Y-%H:%M:%S")
 os.mkdir('screenshots_' + today )
 
-while True:
-    # time.sleep(3)
+for i in range(3):
     browser = webdriver.Chrome()
     browser.maximize_window()
     browser.get("https://voka.tv/ru-RU/tv-v/tv-v2")
