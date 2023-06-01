@@ -32,6 +32,6 @@ for i in range(50):
 
 
     driver.find_element(By.XPATH, "//div[@id='CURRENT_CONTRACT']//div[@class='live-filter-content-item active']//button").click()
-    print ("Выбран " + mobile + " условия " + pay)
     driver.quit()
+    print ("Выбран " + mobile + " условия " + pay)
     
