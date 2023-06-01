@@ -26,8 +26,8 @@ for i in range(50):
 
     driver.find_element(By.XPATH, "//div[contains(text(), '6 мес')]").click()
 
-    mobile = (driver.find_element(By.XPATH, "//h1[@class='h h--1 pdp-header-heading']").text)
-    pay = (driver.find_element(By.XPATH, "//span[@class='select2-selection__rendered']").text)
+    mobile = driver.find_element(By.XPATH, "//h1[@class='h h--1 pdp-header-heading']").text
+    pay = driver.find_element(By.XPATH, "//span[@class='select2-selection__rendered']").text
 
 
 
