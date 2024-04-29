@@ -1,6 +1,6 @@
 from src.pages.BasePage import BasePage
 from selenium.webdriver.common.by import By
-import random
+
 
 class ShopLocators:
 
@@ -8,7 +8,10 @@ class ShopLocators:
     choose_sales = (By.XPATH, "//div[contains(@class, 'tabs-controls-item')]")
 
     # Выбор устройства по кнопке Подробнее
-    choose_more_info = (By.XPATH, "//div[@class='tabs-content-pane active']//div[@class='product-listing-item-btn']")
+    choose_more_info = (
+        By.XPATH,
+        "//div[@class='tabs-content-pane active']//div[@class='product-listing-item-btn']",
+    )
 
     # Выбор дропдауна с условиями продажи
     choose_dropdown_price = (By.XPATH, "//label[@for='i-priceBlock_selector_0']")
@@ -18,13 +21,15 @@ class ShopLocators:
 
     # Выбрать название девайся
     choose_device_text = (By.XPATH, "//h1[@class='h h--1 pdp-header-heading']")
-    
+
     # Выбор цены девайса
     choose_price_text = (By.XPATH, "//span[@class='select2-selection__rendered']")
 
     # Нажатие на кнопку войти
-    choose_enter = (By.XPATH, "//div[@id='CURRENT_CONTRACT']//div[@class='live-filter-content-item active']//button")
-
+    choose_enter = (
+        By.XPATH,
+        "//div[@id='CURRENT_CONTRACT']//div[@class='live-filter-content-item active']//button",
+    )
 
 
 class ShopPage(BasePage):
@@ -43,7 +48,7 @@ class ShopPage(BasePage):
     def move_to_down_page(self):
         self.resolve_js()
         return True
-        
+
     # Кликаем по случайному девайсу
     def click_random_device(self):
         self.click_random_element(ShopLocators.choose_more_info)

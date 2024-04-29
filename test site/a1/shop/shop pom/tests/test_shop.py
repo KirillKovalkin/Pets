@@ -1,9 +1,9 @@
 from src.pages.ShopPage import ShopPage
-from src.steps.shop_steps import shop_step
+
 
 def test_choose_six_month_device(driver):
     shop_page = ShopPage(driver)
-    
+
     # Открыть страницу магазина
     shop_page.open_shop_page()
 
@@ -23,5 +23,3 @@ def test_choose_six_month_device(driver):
 
     # Нажать кнопку войти
     shop_page.click_enter_button()
-    
-
